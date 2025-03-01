@@ -1,0 +1,19 @@
+.filterCriteria{
+    margin: 5px;
+}
+
+.filterButton{
+    margin-top: 15px;
+}
+
+.inline {
+    display: flex;
+    align-items: center;
+
+    &.left > * {
+        margin-right: 10px; 
+    }
+    &.right > * {
+        margin-left: 10px; 
+    }
+}

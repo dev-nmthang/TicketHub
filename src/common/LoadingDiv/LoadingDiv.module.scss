@@ -1,0 +1,73 @@
+.LoadingDivWrapper {
+    position: relative;
+
+    .SpinnerOverlay {
+        width: 100%;
+        height: 100%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }
+
+    .Content {
+        opacity: 1;
+        transition: opacity 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    }
+
+    &.Loading {
+        .SpinnerOverlay { 
+            display: flex; 
+
+            &.MessageTop {
+                flex-direction: column-reverse;
+            }
+            &.MessageBottom {
+                flex-direction: column;
+            }
+            &.MessageLeft {
+                flex-direction: row-reverse;
+            }
+            &.MessageRight {
+                flex-direction: row;
+            }
+        }
+        .Content { opacity: 0.5; }
+    }
+
+    .SpinnerImageWrapper {
+        overflow: hidden;
+
+        &.Animated {
+            animation: rotate360 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        }
+
+        &.Circle {
+            border-radius: 50%;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .SpinnerMessage {
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin: 15px;
+    }
+}
+
+@keyframes rotate360 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

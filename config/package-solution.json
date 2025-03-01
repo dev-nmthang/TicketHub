@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "requestmanager-client-side-solution",
+    "id": "d3c079e3-4578-4fdc-a8cd-02b5bcde8bcd",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.15.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "requestmanager description"
+      },
+      "longDescription": {
+        "default": "requestmanager description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "requestmanager Feature",
+        "description": "The feature that activates elements of the requestmanager solution.",
+        "id": "e4ecd6c8-5d70-4dd4-89e3-580f133f07b9",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/requestmanager.sppkg"
+  }
+}

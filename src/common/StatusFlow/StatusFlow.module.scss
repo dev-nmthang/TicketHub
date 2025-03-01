@@ -1,0 +1,98 @@
+// $statusDraftColor: #fff;
+// $statusDraftBG: #E15D44;
+// $statusSubmittedColor: #fff;
+// $statusSubmittedBG: #34568b;
+// $statusPublishedColor: #fff;
+// $statusPublishedBG: #009b77;
+// $statusUnpublishedColor: #fff;
+// $statusUnpublishedBG: #686868;
+// $statusRejectedColor: #fff;
+// $statusRejectedBG: #dd4124;
+// $statusDecommissionedColor: #fff;
+// $statusDecommissionedBG: #B565A7;
+
+.StatusFlow {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+
+    .Status {
+        padding: 5px 10px;
+        border-radius: 3px 0 0 3px;
+        width: 200px;
+        text-align: center;
+        letter-spacing: .1em;
+        font-weight: 700;
+        margin-left: 15px;
+        position: relative;
+        font-size: 12px;
+
+        &:last-child {
+            border-radius: 3px;
+        }
+        
+        &:not(:last-child)::after {
+            left: 100%;
+            top: 50%;
+            content: "";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border: 15px solid transparent;
+            border-left-color: inherit;
+            transform: translateY(-50%);
+        }
+
+        &.Inactive {
+            background-color: #ccc;
+            color: #919191;
+            border-color: #ccc;
+        }
+    
+        // &.Draft {
+        //     background-color: $statusDraftBG;
+        //     color: $statusDraftColor;
+    
+        //     &::after {
+        //         border-left-color: $statusDraftBG;
+        //     }
+        // }
+    
+        // &.Submitted {
+        //     background-color: $statusSubmittedBG;
+        //     color: $statusSubmittedColor;
+    
+        //     &::after {
+        //         border-left-color: $statusSubmittedBG;
+        //     }
+        // }
+    
+        // &.Published {
+        //     background-color: $statusPublishedBG;
+        //     color: $statusPublishedColor;
+    
+        //     &::after {
+        //         border-left-color: $statusPublishedBG;
+        //     }
+        // }
+    
+        // &.Rejected {
+        //     background-color: $statusRejectedBG;
+        //     color: $statusRejectedColor;
+    
+        //     &::after {
+        //         border-left-color: $statusRejectedBG;
+        //     }
+        // }
+    
+        // &.Decommissioned {
+        //     background-color: $statusDecommissionedBG;
+        //     color: $statusDecommissionedColor;
+    
+        //     &::after {
+        //         border-left-color: $statusDecommissionedBG;
+        //     }
+        // }
+    }
+}

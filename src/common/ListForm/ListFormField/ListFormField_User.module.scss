@@ -1,0 +1,13 @@
+.Readonly{
+    
+    :global .ms-PickerItem-removeButton{
+        display: none;
+    }
+
+    :global .ms-BasePicker-text{
+        border-color: rgb(96, 94, 92);
+        &:after{
+            display:none;
+        }
+    }
+}

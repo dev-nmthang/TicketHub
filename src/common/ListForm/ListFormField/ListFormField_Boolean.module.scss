@@ -1,0 +1,13 @@
+.Readonly{
+    :global .ms-Toggle-background{
+        border-color: rgb(96, 94, 92);
+
+        .ms-Toggle-thumb{
+            background-color: rgb(96, 94, 92);
+        }
+    }
+
+    :global label.ms-Label{
+        color: rgb(50, 49, 48);
+    }
+}

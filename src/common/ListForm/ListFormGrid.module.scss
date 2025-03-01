@@ -1,0 +1,69 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 25px;
+    row-gap: 0px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .colspan1 {
+        grid-column: span 1;
+    }
+    .colspan2 {
+        grid-column: span 2;
+    }
+    .colspan3 {
+        grid-column: span 3;
+    }
+    .colspan4 {
+        grid-column: span 4;
+    }
+
+    .grid.columns1 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid.columns2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid.columns3 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .grid.columns4 {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+}
+
+.rowspan2 {
+    grid-row: span 2;
+}
+
+.rowspan3 {
+    grid-row: span 3;
+}
+
+.rowspan4 {
+    grid-row: span 4;
+}
+.rowspan5 {
+    grid-row: span 5;
+}
+.rowspan6 {
+    grid-row: span 6;
+}
+
+:global {
+    .ms-BasePicker-text {
+        min-height: 32px;
+    }
+}

@@ -1,0 +1,17 @@
+.attachments {
+    width: auto;
+
+    .attachmentIcon {
+        vertical-align: middle;
+        max-height: 16px;
+        max-width: 16px;
+    }
+
+    .removeButton{
+        display:none;
+    }
+
+    :global(.ms-DetailsRow):hover .removeButton {
+        display:block;
+    }
+}

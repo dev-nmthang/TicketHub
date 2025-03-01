@@ -1,0 +1,14 @@
+.multichoice {
+    border: 1px solid #eaeaea;
+    padding: 5px;
+    .option {
+        margin: 3px 5px;
+    }
+    &.Readonly{
+        .option{
+            :global .ms-Checkbox-text{
+                color: inherit;
+            }
+        }
+    }
+}

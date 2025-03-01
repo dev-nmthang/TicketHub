@@ -1,0 +1,30 @@
+.LibraryAttachments {
+    border: 1px solid #868483;
+    padding: 2px;
+    border-radius: 2px;
+
+    :global .ms-FocusZone{
+        display: block;
+    }
+
+    .AttachmentIcon {
+        display: block;
+    }
+    .ActionButtonContainer {
+        display: flex;
+        justify-content: flex-end;
+        .ActionButton {
+            width: 25px;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .AttachmentLink {
+        &:hover {
+            color: "[theme: themePrimary, default: #0078d7]";
+            cursor: pointer;
+        }
+    }
+}

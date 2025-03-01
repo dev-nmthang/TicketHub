@@ -1,0 +1,12 @@
+.Readonly {
+    :global .ms-TextField-field {
+        background-color: white;
+        color: inherit;
+    }
+    :global .ms-TextField-fieldGroup {
+        border-color: rgb(96, 94, 92);
+        > i {
+            display: none;
+        }
+    }
+}

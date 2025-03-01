@@ -1,0 +1,97 @@
+import { WebPartContext } from '@microsoft/sp-webpart-base';
+import { Panel, PanelType } from 'office-ui-fabric-react';
+import * as React from 'react';
+import { FormSection } from './FormSection';
+import {ListForm, FormContext, IFormContext } from './ListForm';
+import listFormStyles from './ListForm.module.scss';
+
+export interface IRequestEditFormProps {
+    itemId: number
+    webPartContext:WebPartContext;
+    onFormClose: ()=>void;
+}
+
+export const RequestEditForm: React.FunctionComponent<IRequestEditFormProps> = (props: React.PropsWithChildren<IRequestEditFormProps>) => {
+    
+    const [isFormReadOnly, setIsFormReadOnly] = React.useState<boolean>(false);
+
+    const init = (formContext: IFormContext)=>{
+
+    }
+
+    const handlers = {
+        handleDismissPanel: ()=>{
+            props.onFormClose();
+        }
+    }
+
+    return (
+        <>
+            <Panel
+                type={PanelType.large}
+                isOpen={true}
+                onDismiss={handlers.handleDismissPanel}
+                closeButtonAriaLabel="Close"
+            >
+                <ListForm
+                    listName={'TARequest'}
+                    itemId={props.itemId}
+                    context={props.webPartContext}
+                    onInit={init}
+                    readonly={isFormReadOnly}
+                >
+                    <FormContext.Consumer>
+                        {formContext =>
+
+                            <div className={listFormStyles.form}>
+{/* 
+                                <Header
+                                    status={this.state.currentStatus}
+                                    handleSaveClick={this.handleSaveClick}
+                                    handleCancelClick={this.handleCancelClick}
+                                    handleDeleteClick={this.handleDeleteClick}
+                                    handleSubmitClick={this.handleSubmitClick}
+                                    handleAssessClick={this.handleAssessClick}
+                                    handleCloseClick={this.handleCloseClick}
+                                    isAdmin={this.state.isAdmin}
+                                    isOwner={this.state.isOwner}
+                                /> */}
+
+                                <FormSection title={`General information ${formContext.listItem ? ` (${formContext.listItem.Id})` : ''}`}>
+
+                                    <div className={`${listFormStyles.grid}`}>
+                                        <div>
+                                            <ListForm.Field fieldInternalName='Title' disabled />
+                                        </div>
+
+
+                                        
+
+                                    </div>
+
+                                </FormSection>
+
+                                <FormSection title={`Another section`}>
+
+                                    <div className={`${listFormStyles.grid}`}>
+                                        {/* <div>
+                                            <ListForm.Field fieldInternalName='Title' disabled />
+                                        </div> */}
+
+                                        
+                                        
+
+                                    </div>
+
+                                </FormSection>
+                            </div>
+
+                        }
+                    </FormContext.Consumer>
+                </ListForm>
+
+            </Panel>
+        );
+        </>
+    );
+};

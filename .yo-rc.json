@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.15.0",
+    "libraryName": "requestmanager",
+    "libraryId": "d3c079e3-4578-4fdc-a8cd-02b5bcde8bcd",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "requestmanager",
+    "solutionShortDescription": "requestmanager description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
