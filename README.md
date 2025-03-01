@@ -1,5 +1,12 @@
 # requestmanager
 
+Node.js version: 14.19.1
+npm version: 6.14.17
+
+gulp
+CLI version: 2.3.0
+Local version: 4.0.2
+
 ## Summary
 
 Short summary on functionality and used technologies.
